@@ -42,7 +42,9 @@ namespace PracticeCodes
             {
                 intermediateSum += num;
 
-                if (finalSum < intermediateSum)
+                if (intermediateSum < 0)
+                    intermediateSum = 0;
+                else if (finalSum < intermediateSum)
                     finalSum = intermediateSum;
             }
 
