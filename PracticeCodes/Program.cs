@@ -36,19 +36,9 @@ namespace PracticeCodes
         private static void LargestContiguousSubArraySum()
         {
             int[] inputNums = { -2, -3, 4, -1, -2, 1, 5, -3 };
-            int finalSum = 0, intermediateSum = 0;
 
-            foreach (var num in inputNums)
-            {
-                intermediateSum += num;
-
-                if (intermediateSum < 0)
-                    intermediateSum = 0;
-                else if (finalSum < intermediateSum)
-                    finalSum = intermediateSum;
-            }
-
-            Console.WriteLine($"Sum: {finalSum}");
+            var largestContiguousSubArray = new LargestContiguousSubArray(inputNums);
+            Console.WriteLine($"Largest Sum: {largestContiguousSubArray.GetLargestContiguousSum()}");
         }
     }
 }
